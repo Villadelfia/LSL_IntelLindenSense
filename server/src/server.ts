@@ -69,6 +69,7 @@ documents.onDidChangeContent(change => {
 });
 
 async function validateTextDocument(textDocument: TextDocument): Promise<void> {
+    connection.console.log(textDocument.getText());
     return;
 }
 
