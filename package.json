@@ -1,0 +1,73 @@
+{
+  "name": "lsl-intellindensense",
+  "displayName": "LSL IntelLindenSense",
+  "description": "LSP based LSL language support for VS Code including Firestorm preprocessor features.",
+  "author": "Randy Thiemann",
+  "publisher": "NRI",
+  "license": "MIT",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Villadelfia/LSL_IntelLindenSense"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+	"keywords": [
+		"multi-root ready"
+	],
+  "engines": {
+    "vscode": "^1.79.1"
+  },
+  "activationEvents": [
+    "onLanguage:lsl"
+  ],
+  "main": "./client/out/extension",
+  "contributes": {
+    "languages": [
+      {
+        "id": "lsl",
+        "aliases": [
+          "LSL",
+          "lsl",
+          "Linden Scripting Language"
+        ],
+        "extensions": [
+          ".lsl"
+        ]
+      }
+    ],
+		"configuration": {
+			"title": "LSL",
+			"properties": {
+				"lsl.fs_include_path": {
+					"title": "Firestorm preprocessor include path",
+					"description": "Root directory for the Firestorm #include <...> directive.",
+					"type": "string",
+					"default": "C:\\LSL\\",
+					"markdownDescription": "",
+					"scope": "window"
+				}
+			}
+		}
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -b",
+    "watch": "tsc -b -w",
+    "lint": "eslint ./client/src ./server/src --ext .ts,.tsx",
+		"postinstall": "cd client && npm install && cd ../server && npm install && cd .."
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.79.1",
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "20.2.5",
+    "@typescript-eslint/eslint-plugin": "^5.59.8",
+    "@typescript-eslint/parser": "^5.59.8",
+    "eslint": "^8.41.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.2.0",
+    "typescript": "^5.1.3"
+  }
+}

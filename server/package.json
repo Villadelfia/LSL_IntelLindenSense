@@ -1,0 +1,19 @@
+{
+	"name": "lsl-intellindensense-client",
+  "description": "VSCode part",
+  "author": "Randy Thiemann",
+  "publisher": "NRI",
+  "license": "MIT",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Villadelfia/LSL_IntelLindenSense"
+  },
+  "engines": {
+    "node": "*"
+  },
+	"dependencies": {
+		"vscode-languageserver": "^8.1.0",
+    "vscode-languageserver-textdocument": "^1.0.8"
+	}
+}

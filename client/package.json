@@ -1,0 +1,21 @@
+{
+	"name": "lsl-intellindensense-server",
+  "description": "LSP part",
+  "author": "Randy Thiemann",
+  "publisher": "NRI",
+  "license": "MIT",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Villadelfia/LSL_IntelLindenSense"
+  },
+  "engines": {
+    "vscode": "^1.79.1"
+  },
+	"dependencies": {
+		"vscode-languageclient": "^8.1.0"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.79.1"
+	}
+}
